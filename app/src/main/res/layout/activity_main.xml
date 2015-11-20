@@ -74,7 +74,8 @@
         android:gravity="center"
         android:layout_below="@+id/signUpButton"
         android:text="Try for Free"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="15dp"
+        />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
