@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">RPA</string>
-
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="app_moto">Your own virtual financial adviser.</string>
     <color name="body_background">#000</color>
+    <color name="moto_text_color">#FFF</color>
+    <color name="button_text_color">#0a34a5</color>
+    <color name="button_background_color">#FFF</color>
+    <color name="button_shadow_color">#b40a34a5</color>
 </resources>

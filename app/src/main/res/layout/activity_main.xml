@@ -1,20 +1,86 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:paddingLeft="@dimen/activity_horizontal_margin"
                 android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingTop="@dimen/activity_vertical_margin"
                 android:paddingBottom="@dimen/activity_vertical_margin"
                 tools:context=".MainActivity"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+                android:textAlignment="center">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView"
+        android:id="@+id/rbcLogo"
         android:src="@drawable/rbc_logo"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="0dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_moto"
+        android:id="@+id/appMoto"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/rbcLogo"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="@color/moto_text_color"
+        />
+    <!--<ImageButton-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/appMoto"-->
+        <!--/>-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signInButton"
+        android:text="Sign In"
+        android:textAlignment="center"
+        android:layout_marginTop="30dp"
+        android:background="@color/button_background_color"
+        android:gravity="center"
+        android:shadowColor="@color/button_shadow_color"
+        android:textColor="@color/button_text_color"
+        android:layout_below="@+id/appMoto"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signUpButton"
+        android:background="@color/button_background_color"
+        android:shadowColor="@color/button_shadow_color"
+        android:textColor="@color/button_text_color"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_below="@+id/signInButton"
+        android:text="Sign Up"
+        android:layout_marginTop="15dp"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tryForFreeButton"
+        android:background="@color/button_background_color"
+        android:shadowColor="@color/button_shadow_color"
+        android:textColor="@color/button_text_color"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_below="@+id/signUpButton"
+        android:text="Try for Free"
+        android:layout_marginTop="15dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#00F"
+        android:gravity="center"
+        android:padding="20dp"
+        android:layout_below="@+id/tryForFreeButton"
+        android:text="Terms and Condition"/>
 </RelativeLayout>
