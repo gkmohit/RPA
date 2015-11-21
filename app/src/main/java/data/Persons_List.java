@@ -10,6 +10,7 @@ import model.Person;
  */
 public class Persons_List {
 
+//static void main(String[] args){
 
 
     public static Set<Person> persons = new TreeSet<>();
@@ -25,5 +26,9 @@ public class Persons_List {
         persons.add(andy);
         persons.add(moo);
         persons.add(sangeev);
+
     }
+    //String first_name, String last_name, String address, int age, String phone_number, ArrayList<Asset> assets
+
+   // }
 }

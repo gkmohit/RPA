@@ -20,6 +20,7 @@ public class Login {
     public String get_username(){
         return this.username;
     }
+    public String get_password() { return this.password; }
 }
 
 
