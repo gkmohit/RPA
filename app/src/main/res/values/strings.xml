@@ -384,10 +384,7 @@
     <string name="fa_vimeo_square">&#xf194;</string>
     <string name="fa_try">&#xf195;</string>
     <string name="fa_plus_square_o">&#xf196;</string>
-<<<<<<< HEAD
-=======
 
->>>>>>> a7a5ac52a61eb02da525507debffb2447efaa6c2
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_home_page">HomePageActivity</string>
