@@ -7,13 +7,18 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:background="@drawable/app_background"
-    tools:context="com.unknown.gkmohit.rpa.SignUpActivity">
+    tools:context="com.unknown.gkmohit.rpa.SignUpActivity"
+    android:contextClickable="false"><![CDATA[
+
+    />
+
+    ]]>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingTop="20dp"
-        android:text="Sign Up For Free,\n Fellas!"
+        android:text="Sign Up"
         android:gravity="center"
         android:textStyle="bold"
         android:textSize="40sp"
@@ -24,17 +29,209 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/Intro"
-        android:layout_marginTop="55dp"
-        android:text="Your Name"
-        android:textSize="25sp"
-        android:textColor="@color/app_text_color"
-        android:id="@+id/F_Name"
-        />
+        android:layout_marginTop="31dp"
+        android:textSize="15sp"
+        android:textColor="#f2a71c"
+        android:id="@+id/First_Name"
+        android:layout_below="@+id/Intro"
+        android:layout_toLeftOf="@+id/first_name"
+        android:layout_toStartOf="@+id/first_name" />
+
     <EditText
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:textAllCaps="true"
-    android:layout_toRightOf="@id/F_Name"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Last Name"
+        android:ems="10"
+        android:textSize="25dp"
+        android:id="@+id/last_name"
+        android:layout_alignTop="@+id/Last_Name"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/edit_text_background"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp"
+        android:paddingRight="3dp"
+        android:paddingBottom="3dp"
+        android:singleLine="true" />
+    <requestFocus/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="#f2a71c"
+        android:id="@+id/Last_Name"
+        android:layout_marginTop="46dp"
+        android:layout_below="@+id/First_Name"
+        android:layout_toLeftOf="@+id/last_name"
+        android:layout_toStartOf="@+id/last_name" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="#f2a71c"
+        android:id="@+id/Email"
+        android:layout_marginTop="51dp"
+        android:layout_below="@+id/last_name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/Last_Name"
+        android:layout_alignEnd="@+id/Last_Name" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Email"
+        android:ems="10"
+        android:textSize="25dp"
+        android:id="@+id/email"
+        android:background="@color/edit_text_background"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp"
+        android:paddingRight="3dp"
+        android:paddingBottom="3dp"
+        android:layout_alignBottom="@+id/Email"
+        android:layout_alignLeft="@+id/last_name"
+        android:layout_alignStart="@+id/last_name"
+        android:singleLine="true" />
+    <requestFocus/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="First Name"
+        android:ems="10"
+        android:textSize="25dp"
+        android:id="@+id/first_name"
+        android:background="@color/edit_text_background"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp"
+        android:paddingRight="3dp"
+        android:paddingBottom="3dp"
+        android:layout_alignTop="@+id/First_Name"
+        android:layout_alignLeft="@+id/last_name"
+        android:layout_alignStart="@+id/last_name"
+        android:singleLine="true" />
+    <requestFocus/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox"
+
+        android:checked="false"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/password"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:clickable="true"
+        android:onClick="boxCheck"
+        android:layout_alignRight="@+id/Password"
+        android:layout_alignEnd="@+id/Password"
+        android:background="#fff" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Yes, I agree with RBC Terms and Conditions."
+        android:textColor="@color/app_text_color"
+        android:gravity="left"
+        android:layout_alignTop="@+id/checkBox"
+        android:layout_alignLeft="@+id/password"
+        android:layout_alignStart="@+id/password"
+        android:layout_alignBottom="@+id/checkBox"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:singleLine="false"
+        android:paddingStart="10dp" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        android:textSize="20dp"
+        android:id="@+id/signUpButton"
+        android:background="@color/button_background_color"
+        android:textColor="@color/button_text_color"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Username"
+        android:ems="10"
+        android:textSize="25dp"
+        android:id="@+id/username"
+        android:background="@color/edit_text_background"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp"
+        android:paddingRight="3dp"
+        android:paddingBottom="3dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/email"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:singleLine="true" />
+    <requestFocus/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:layout_alignBottom="@+id/username"
+        android:layout_toLeftOf="@+id/checkBox"
+        android:layout_toStartOf="@+id/checkBox"
+        android:textSize="15sp"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Password"
+        android:ems="10"
+        android:textSize="25dp"
+        android:id="@+id/password"
+        android:background="@color/edit_text_background"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp"
+        android:paddingRight="3dp"
+        android:paddingBottom="3dp"
+        android:layout_marginTop="34dp"
+        android:layout_below="@+id/username"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:singleLine="true" />
+    <requestFocus/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="#f2a71c"
+        android:id="@+id/Username"
+        android:layout_toLeftOf="@+id/username"
+        android:layout_toStartOf="@+id/username"
+        android:layout_alignTop="@+id/textView3" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textColor="#f2a71c"
+        android:id="@+id/Password"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/password"
+        android:layout_toStartOf="@+id/password"
+        android:layout_above="@+id/checkBox"
+        android:singleLine="false" />
+
 
 </RelativeLayout>
+
