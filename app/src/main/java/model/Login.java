@@ -10,13 +10,10 @@ public class Login {
 
     public Login(String username, int per_id, String email, String password)
     {
-        if(per_id != 0 && username != null)
-        {
             this.username = username;
             this.email = email;
             this.password = password;
             this.per_id = per_id;
-        }
     }
 
     public String get_username(){
