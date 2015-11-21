@@ -15,7 +15,6 @@
     <color name="edit_text_background">#F9F9F9</color>
 
 
-
     <string name="fa_glass">&#xf000;</string>
     <string name="fa_music">&#xf001;</string>
     <string name="fa_search">&#xf002;</string>
@@ -385,4 +384,7 @@
     <string name="fa_vimeo_square">&#xf194;</string>
     <string name="fa_try">&#xf195;</string>
     <string name="fa_plus_square_o">&#xf196;</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
