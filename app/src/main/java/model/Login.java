@@ -1,7 +1,39 @@
 package model;
 
-/**
- * Created by AirUnknown on 15-11-21.
- */
+import java.io.*;
+import java.util.*;
+
+
 public class Login {
+
+    private String username;
+    private int per_id;
+    private String password;
+    private String email;
+
+    public Login(String username, int per_id, String email, String password){
+        if(per_id != 0 && username != null){
+            this.username = username;
+            this.email = email;
+            this.password = password;
+            this.per_id = per_id;
+        }
+    }
+
+    public String get_username(){
+        return this.username;
+    }
 }
+
+
+/*create table login (
+    pid varchar(20) not null,
+    username varchar(20) not null,
+    password varchar(20) not null,
+    email varchar(20) not null,
+    constraint login_pk
+            primary key(pid, username),
+    constraint login_fk_pid
+            foreign key(pid) references person
+);*/
+
