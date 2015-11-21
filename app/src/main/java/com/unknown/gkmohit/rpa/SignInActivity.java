@@ -56,7 +56,7 @@ public class SignInActivity extends AppCompatActivity {
 
                 for(Person p : Persons_List.persons)
                 {
-                    if(p.get_firstName().equalsIgnoreCase(username))
+                    if(p.getLogin().get_username().equalsIgnoreCase(username))
                     {
                         Intent homePage = new Intent(SignInActivity.this, HomePageActivity.class);
                         SignInActivity.this.startActivity(homePage);
