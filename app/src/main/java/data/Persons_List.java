@@ -14,6 +14,7 @@ public class Persons_List {
 
 
     public static Set<Person> persons = new TreeSet<>();
+    public static Person personArray[];
 
     static {
 

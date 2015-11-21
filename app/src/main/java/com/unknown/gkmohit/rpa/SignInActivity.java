@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -45,12 +44,11 @@ public class SignInActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent homePage = new Intent(SignInActivity.this, HomePageActivity.class);
-
                 String username = mUserNameEditText.getText().toString();
                 String password = mPasswordEditText.getText().toString();
                 //model.Person a;
                 int i = 0;
-                int size = Persons_List.persons.size();
+//                int size = Persons_List.persons.size();
                 Iterator<Person> it = Persons_List.persons.iterator();
                    while (it.hasNext()) {
                        if (it.next().getLogin().get_username().equals(username)) {
