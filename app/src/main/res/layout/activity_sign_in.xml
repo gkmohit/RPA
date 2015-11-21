@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/app_background"
+                tools:context="com.unknown.gkmohit.rpa.SignInActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/edit_text_background"
+        android:textSize="25dp"
+        android:hint="username"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="182dp"
+        android:id="@+id/userNameEditText"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp"
+        android:paddingRight="3dp"
+        android:paddingBottom="3dp"
+        android:layout_alignLeft="@+id/rbcLoginTitle"
+        android:layout_alignStart="@+id/rbcLoginTitle"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rbcLoginTitle"
+        android:layout_alignBottom="@+id/userNameEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="85dp"
+        android:src="@drawable/login_title"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fa_user"
+        android:textSize="30sp"
+        android:textColor="@color/app_text_color"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignTop="@+id/userNameEditText"
+        android:layout_toLeftOf="@+id/userNameEditText"
+        android:id="@+id/userNameFA"
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/userNameEditText"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/passwordEditText"
+        android:layout_below="@+id/userNameEditText"
+        android:layout_alignRight="@+id/userNameEditText"
+        android:layout_alignEnd="@+id/userNameEditText"
+        android:layout_marginTop="30dp"
+        android:background="@color/edit_text_background"
+        android:textSize="25dp"
+        android:hint="password"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp"
+        android:paddingRight="3dp"
+        android:paddingBottom="3dp"
+        android:layout_toRightOf="@+id/userNameFA"
+        android:layout_toEndOf="@+id/userNameFA"
+        android:password="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fa_briefcase"
+        android:id="@+id/passwordFA"
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="30sp"
+        android:textColor="@color/app_text_color"
+        android:layout_alignBottom="@+id/passwordEditText"
+        android:layout_toLeftOf="@+id/passwordEditText"
+        android:layout_toStartOf="@+id/passwordEditText"
+        android:layout_alignTop="@+id/passwordEditText"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:id="@+id/button"
+        android:background="@color/button_text_color"
+        android:textColor="@color/button_background_color"
+        android:layout_below="@+id/passwordEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Dont have an account yet? Sign Up"
+        android:gravity="center"
+        android:id="@+id/textView"
+        android:textColor="@color/app_text_color"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>
