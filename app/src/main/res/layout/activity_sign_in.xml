@@ -14,26 +14,26 @@
         android:layout_height="wrap_content"
         android:background="@color/edit_text_background"
         android:textSize="25dp"
-        
         android:hint="username"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="182dp"
+        android:layout_marginTop="140dp"
         android:id="@+id/userNameEditText"
         android:paddingLeft="10dp"
         android:paddingTop="3dp"
         android:paddingRight="3dp"
         android:paddingBottom="3dp"
-        android:layout_alignLeft="@+id/rbcLoginTitle"
-        android:layout_alignStart="@+id/rbcLoginTitle"/>
+        android:layout_alignLeft="@+id/rbcLoginLogo"
+        android:layout_alignStart="@+id/rbcLoginLogo"
+        android:layout_below="@+id/rbcLoginLogo"/>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/rbcLoginTitle"
-        android:layout_alignBottom="@+id/userNameEditText"
+        android:id="@+id/rbcLoginLogo"
+        android:src="@drawable/login_title"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="85dp"
-        android:src="@drawable/login_title"/>
+        android:layout_marginTop="60dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -88,9 +88,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Sign In"
-        android:id="@+id/button"
-        android:background="@color/button_text_color"
-        android:textColor="@color/button_background_color"
+        android:id="@+id/signInButton"
+        android:background="@color/button_background_color"
+        android:textColor="@color/button_text_color"
         android:layout_below="@+id/passwordEditText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"/>
@@ -104,6 +104,17 @@
         android:textColor="@color/app_text_color"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password"
+        android:id="@+id/forgotPasswordEditText"
+        android:layout_below="@+id/signInButton"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/app_text_color"/>
 
 
 </RelativeLayout>

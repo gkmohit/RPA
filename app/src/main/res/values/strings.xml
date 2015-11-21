@@ -6,8 +6,8 @@
     <string name="app_moto">Your own virtual financial adviser.</string>
     <color name="body_background">#000</color>
     <color name="moto_text_color">#FFF</color>
-    <color name="button_text_color">#0a34a5</color>
-    <color name="button_background_color">#FFF</color>
+    <color name="button_text_color">#FFF</color>
+    <color name="button_background_color">#0a34a5</color>
     <color name="button_shadow_color">#b40a34a5</color>
     <string name="title_activity_sign_in">Sign In</string>
     <color name="body_backgroung">#070716</color>

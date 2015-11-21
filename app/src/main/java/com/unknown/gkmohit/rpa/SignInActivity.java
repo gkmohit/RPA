@@ -3,6 +3,7 @@ package com.unknown.gkmohit.rpa;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Button;
 import android.widget.TextView;
 
 import butterknife.Bind;
@@ -14,6 +15,8 @@ public class SignInActivity extends AppCompatActivity {
     TextView mUserNameFA;
     @Bind(R.id.passwordFA)
     TextView mPasswordFA;
+    @Bind(R.id.signInButton)
+    Button mSignInButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
