@@ -1,5 +1,7 @@
 package data;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -13,10 +15,9 @@ public class Persons_List {
 //static void main(String[] args){
 
 
-    public static Set<Person> persons = new TreeSet<>();
-    public static Person personArray[];
+    public static Set<Person> persons = new HashSet<Person>();
 
-    static {
+    public static void access(){
 
         Person jack = new Person("Jack", "Ma", "2980 Leslie Street, Toronto, M3J 4B9", 45, "6478764334");
         Person andy = new Person("Andy", "Do Nhat", "Etobicoke", 25, "6378963454");
@@ -29,7 +30,4 @@ public class Persons_List {
         persons.add(sangeev);
 
     }
-    //String first_name, String last_name, String address, int age, String phone_number, ArrayList<Asset> assets
-
-   // }
 }

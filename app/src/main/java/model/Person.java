@@ -20,16 +20,15 @@ public class Person {
     private Login login;
     //private static int pids[];
 
-    public Person(String first_name, String last_name, String address, int age, String phone_number) {
-        if(first_name != null && last_name != null){
-            this.first_name = first_name;
-            this.last_name = last_name;
-            this.address = address;
-            this.age = age;
-            this.phone_number = phone_number;
+    public Person(String fn, String ln, String add, int aGE, String pn)
+    {
+            first_name = fn;
+            last_name = ln;
+            address = add;
+            age = aGE;
+            phone_number = pn;
             per_id = IdGenerator.nextPId();
             login = new Login(first_name.toLowerCase(), per_id, first_name.toLowerCase()+"@gmail.com", "hello");
-        }
 
     }
 
@@ -38,15 +37,15 @@ public class Person {
     }
 
     public String  get_firstName() {
-        return new String(first_name);
+        return first_name;
     }
 
     public String get_lastName(){
-        return new String(last_name);
+        return last_name;
     }
 
     public String get_fullName(){
-        return new String("" + first_name + " " + last_name);
+        return first_name + " " + last_name;
     }
 
     public Login getLogin() {

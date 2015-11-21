@@ -43,18 +43,36 @@ public class SignInActivity extends AppCompatActivity {
         mSignInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent homePage = new Intent(SignInActivity.this, HomePageActivity.class);
+                //System.out.println("Username: "+mUserNameEditText.getText().toString());
+                //System.out.println("Password: "+mPasswordEditText.getText().toString());
+                Persons_List.access();
+
                 String username = mUserNameEditText.getText().toString();
                 String password = mPasswordEditText.getText().toString();
-                //model.Person a;
-                int i = 0;
-//                int size = Persons_List.persons.size();
-                Iterator<Person> it = Persons_List.persons.iterator();
-                   while (it.hasNext()) {
-                       if (it.next().getLogin().get_username().equals(username)) {
+
+               // int i = 0;
+                //int size = Persons_List.persons.size();
+                //System.out.println(Persons_List.persons.size());
+
+                for(Person p : Persons_List.persons)
+                {
+                    if(p.get_firstName().equalsIgnoreCase(username))
+                    {
+                        Intent homePage = new Intent(SignInActivity.this, HomePageActivity.class);
+                        SignInActivity.this.startActivity(homePage);
+                    }
+
+                }
+
+/*                Iterator<Person> it = Persons_List.persons.iterator();
+                   while (it.hasNext())
+                   {
+                       if (it.next().getLogin().get_username().equals(username))
+                       {
+                           Intent homePage = new Intent(SignInActivity.this, HomePageActivity.class);
                            SignInActivity.this.startActivity(homePage);
                        }
-                   }
+                   }*/
                 }
         });
 
