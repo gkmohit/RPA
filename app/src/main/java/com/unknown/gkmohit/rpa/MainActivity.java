@@ -13,6 +13,9 @@ public class MainActivity extends AppCompatActivity {
     @Bind(R.id.signInButton)
     Button mSignInButton;
 
+    @Bind(R.id.signUpButton)
+    Button mSignUpButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +27,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent signIn = new Intent(MainActivity.this, SignInActivity.class);
                 MainActivity.this.startActivity(signIn);
+            }
+        });
+
+        mSignUpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent signUp = new Intent(MainActivity.this, SignUpActivity.class);
+                MainActivity.this.startActivity(signUp);
             }
         });
     }

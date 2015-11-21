@@ -1,90 +1,56 @@
 package model;
 
+
 /**
  * Created by AirUnknown on 15-11-21.
  */
 
-//create table person (
-//        pid varchar(20) not null,
-//        firstName varchar(25) not null,
-//        laststName varchar(25) not null,
-//        age varchar(3) not null,
-//        country varchar(25),
-//        phoneNumber varchar(20),
-//        constraint person_pk
-//        primary key(pid)
-//        );
+//import java.io.*;
+import java.util.*;
+
 public class Person {
-    private String mFirstName;
-    private String mLastName;
-    private int mAge;
-    private String mCountry;
-    private String mPhoneNumber;
-    private int mPid;
 
+    private String first_name;
+    private String last_name;
+    private String address;
+    private int age;
+    private String phone_number;
+    private int per_id;
+    private ArrayList<Asset> Assets;
+    private Login login;
+    //private static int pids[];
 
-    public Person(String firstName, String lastName, int age, int pid) {
-        mFirstName = firstName;
-        mLastName = lastName;
-        mAge = age;
-        mPid = pid;
+    public Person(String first_name, String last_name, String address, int age, String phone_number) {
+        if(first_name != null && last_name != null){
+            this.first_name = first_name;
+            this.last_name = last_name;
+            this.address = address;
+            this.age = age;
+            this.phone_number = phone_number;
+            per_id = IdGenerator.nextPId();
+            login = new Login(""+first_name+last_name, per_id, "hello@gmail.com", "hello");
+        }
+
     }
 
-    public Person(String firstName, String lastName, int age, String country, String phoneNumber, int pid) {
-        mFirstName = firstName;
-        mLastName = lastName;
-        mAge = age;
-        mCountry = country;
-        mPhoneNumber = phoneNumber;
-        mPid = pid;
+    public int get_personId(){
+        return per_id;
     }
 
-    public String getFirstName() {
-        return mFirstName;
+    public String  get_firstName() {
+        return new String(first_name);
     }
 
-    public void setFirstName(String firstName) {
-        mFirstName = firstName;
+    public String get_lastName(){
+        return new String(last_name);
     }
 
-    public String getLastName() {
-        return mLastName;
+    public String get_fullName(){
+        return new String("" + first_name + " " + last_name);
     }
 
-    public void setLastName(String lastName) {
-        mLastName = lastName;
-    }
-
-    public int getAge() {
-        return mAge;
-    }
-
-    public void setAge(int age) {
-        mAge = age;
-    }
-
-    public String getCountry() {
-        return mCountry;
-    }
-
-    public void setCountry(String country) {
-        mCountry = country;
-    }
-
-    public String getPhoneNumber() {
-        return mPhoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        mPhoneNumber = phoneNumber;
-    }
-
-    public int getPid() {
-        return mPid;
-    }
-
-    public void setPid(int pid) {
-        mPid = pid;
+    public Login getLogin() {
+        return login;
     }
 }
 

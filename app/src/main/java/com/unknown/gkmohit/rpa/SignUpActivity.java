@@ -19,5 +19,7 @@ public class SignUpActivity extends AppCompatActivity {
       //  Typeface font = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
       //  mUserNameFA.setTypeface(font);
        // mPasswordFA.setTypeface(font);
+
+
     }
 }
