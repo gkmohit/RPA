@@ -12,12 +12,18 @@ public class HomePageActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_page);
-        mDrawerList = (ListView)findViewById(R.id.navList);
+        setContentView(R.layout.drawerlayout);
+        mDrawerList = (ListView) findViewById(R.id.navList);
 
-//        private void addDrawerItems() {
-//            String[] osArray = { "Android", "iOS", "Windows", "OS X", "Linux" };
-//            mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
-//            mDrawerList.setAdapter(mAdapter);
+        addDrawerItems();
+    }
+        private void addDrawerItems() {
+        String[] osArray = {"Android", "iOS", "Windows", "OS X", "Linux"};
+        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
+        mDrawerList.setAdapter(mAdapter);
         }
 }
+
+
+
+
