@@ -22,6 +22,10 @@
             android:label="@string/title_activity_sign_in"
             android:screenOrientation="portrait">
         </activity>
+        <activity
+            android:name=".SignUpActivity"
+             android:label="Sign Up" >
+        </activity>
     </application>
 
 </manifest>
