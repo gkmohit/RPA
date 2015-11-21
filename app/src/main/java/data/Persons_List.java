@@ -13,6 +13,7 @@ public class Persons_List {
 
 
     public static Set<Person> persons = new TreeSet<>();
+    public static Person personArray[];
 
     static {
 
@@ -25,5 +26,7 @@ public class Persons_List {
         persons.add(andy);
         persons.add(moo);
         persons.add(sangeev);
+
+//        personArray
     }
 }

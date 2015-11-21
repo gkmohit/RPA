@@ -28,7 +28,7 @@ public class Person {
             this.age = age;
             this.phone_number = phone_number;
             per_id = IdGenerator.nextPId();
-            login = new Login(""+first_name+last_name, per_id, "hello@gmail.com", "hello");
+            login = new Login(first_name.toLowerCase()+last_name.toLowerCase(), per_id, first_name.toLowerCase()+"@gmail.com", "hello");
         }
 
     }
