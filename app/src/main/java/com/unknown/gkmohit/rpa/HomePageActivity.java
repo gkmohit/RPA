@@ -38,6 +38,14 @@ public class HomePageActivity extends AppCompatActivity {
         mEstateTextView.setTypeface(font);
         mRetirementTextView.setTypeface(font);
 
+        mProfitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent profitsPage = new Intent(HomePageActivity.this, StockProfitActivity.class);
+                HomePageActivity.this.startActivity(profitsPage);
+            }
+        });
+
         mGoalsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,13 +55,7 @@ public class HomePageActivity extends AppCompatActivity {
             }
         });
 
-        mProfitButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent profitsPage = new Intent(HomePageActivity.this, StockProfitActivity.class);
-                HomePageActivity.this.startActivity(profitsPage);
-            }
-        });
+
         }
 
 
