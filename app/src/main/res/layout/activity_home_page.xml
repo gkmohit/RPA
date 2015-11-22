@@ -138,7 +138,6 @@
                 android:layout_weight="1"
                 android:text="PIE"
                 android:id="@+id/ownedPieChartFrame" >
-
                 </FrameLayout>
         </LinearLayout>
     </LinearLayout>
