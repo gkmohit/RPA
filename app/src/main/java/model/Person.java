@@ -6,9 +6,9 @@ package model;
  */
 
 //import java.io.*;
+import java.io.Serializable;
 import java.util.*;
-
-public class Person {
+public class Person  implements Serializable {
 
     private String first_name;
     private String last_name;
@@ -32,6 +32,7 @@ public class Person {
 
     }
 
+
     public int get_personId(){
         return per_id;
     }
@@ -51,5 +52,7 @@ public class Person {
     public Login getLogin() {
         return login;
     }
+
+
 }
 
