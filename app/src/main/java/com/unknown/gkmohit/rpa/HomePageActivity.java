@@ -22,6 +22,10 @@ public class HomePageActivity extends AppCompatActivity {
     @Bind(R.id.cashTextView) TextView mCashTextView;
     @Bind(R.id.estateTextView) TextView mEstateTextView;
     @Bind(R.id.retirementTextView) TextView mRetirementTextView;
+    @Bind (R.id.ownedButton) Button mOwnedButton;
+    @Bind (R.id.goalsButton) Button mGoalsButton;
+    @Bind (R.id.profitButton) Button mProfitButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,8 +37,24 @@ public class HomePageActivity extends AppCompatActivity {
         mCashTextView.setTypeface(font);
         mEstateTextView.setTypeface(font);
         mRetirementTextView.setTypeface(font);
+        mGoalsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goalsPage = new Intent(HomePageActivity.this, StocksGoalsActivity.class);
+                HomePageActivity.this.startActivity(goalsPage);
+            }
+        });
 
+        mProfitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent profitsPage = new Intent(HomePageActivity.this, StockProfitActivity.class);
+                HomePageActivity.this.startActivity(profitsPage);
+            }
+        });
         }
+
+
 
 
 
