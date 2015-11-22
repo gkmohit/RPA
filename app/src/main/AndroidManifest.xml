@@ -33,13 +33,6 @@
             android:name=".StockActivity"
             android:label="@string/title_activity_sign_in"
             android:screenOrientation="portrait"></activity>
-        <activity
-            android:name=".FirstHomePage"
-            android:label="@string/title_activity_first_home_page"></activity>
-        <activity
-            android:name=".FirstPageBetaActivity"
-            android:label="@string/title_activity_first_page_beta"
-            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
