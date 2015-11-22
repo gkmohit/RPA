@@ -3,7 +3,7 @@ package model;
 import java.io.*;
 import java.util.*;
 
-public class Asset {
+public class Asset implements Serializable {
 
     private String aid;
     private String atype;

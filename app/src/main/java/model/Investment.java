@@ -6,17 +6,6 @@ import java.security.Timestamp;
  * Created by Shrey on 11/21/2015.
  */
 public class Investment {
-//    create table stock (
-//            aid varchar(20) not null,
-//    st_company_name varchar(50),
-//    number_share integer,
-//    bought_price integer,
-//    time_updated timestamp,
-//    constraint stock_pk
-//    primary key(aid),
-//    constraint stock_fk_aid
-//    foreign key(aid) references asset
-//    );
 
     private String aid;
     private String st_company_name;
