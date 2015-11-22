@@ -74,7 +74,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/fa_briefcase"
+        android:text="@string/fa_lock"
         android:id="@+id/passwordFA"
         android:gravity="center"
         android:layout_alignParentLeft="true"

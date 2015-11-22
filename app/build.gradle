@@ -13,14 +13,14 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled false 
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
 
 repositories {
-    maven { url "https://jitpack.io" }
+    maven { url  "https://jitpack.io" }
 }
 
 dependencies {
@@ -29,4 +29,5 @@ dependencies {
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.github.PhilJay:MPAndroidChart:v2.1.6'
     compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.android.support:design:23.1.1'
 }
