@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import butterknife.Bind;
@@ -19,9 +20,6 @@ public class MoneyTabActivity extends AppCompatActivity {
 
     @Bind(R.id.networthButton)
     Button mNetworthButton;
-
-    @Bind(R.id.checkingsButton)
-    Button mCheckingsButton;
 
     @Bind(R.id.stockTextView)
     TextView mStockTextView;
@@ -50,16 +48,16 @@ public class MoneyTabActivity extends AppCompatActivity {
         mCreditButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent nextPage = new Intent(MoneyTabActivity.this, MoneyCreditActivity.class);
-                MoneyTabActivity.this.startActivity(nextPage);
+                Intent creditPage = new Intent(MoneyTabActivity.this, MoneyCreditActivity.class);
+                MoneyTabActivity.this.startActivity(creditPage);
             }
         });
 
         mNetworthButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent nextPage = new Intent(MoneyTabActivity.this, MoneyNetworthActivity.class);
-                MoneyTabActivity.this.startActivity(nextPage);
+                Intent netWorthPage = new Intent(MoneyTabActivity.this, MoneyNetworthActivity.class);
+                MoneyTabActivity.this.startActivity(netWorthPage);
             }
         });
 
@@ -71,6 +69,4 @@ public class MoneyTabActivity extends AppCompatActivity {
             }
         });
     }
-
-
 }

@@ -15,18 +15,22 @@ public class MoneyNetworthActivity extends AppCompatActivity {
 
     @Bind(R.id.creditButton)
     Button mCreditButton;
-    @Bind(R.id.networthButton)
-    Button mNetworthButton;
+
     @Bind(R.id.checkingsButton)
     Button mCheckingsButton;
+
     @Bind(R.id.stockTextView)
     TextView mStockTextView;
+
     @Bind(R.id.cashTextView)
     TextView mCashTextView;
+
     @Bind(R.id.estateTextView)
     TextView mEstateTextView;
+
     @Bind(R.id.retirementTextView)
     TextView mRetirementTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
