@@ -51,6 +51,7 @@ public class StockProfitActivity extends AppCompatActivity {
     private float[] yData ={12,13,15,7,30};
     private String[] xData = {"", "", "", "", ""};
 
+//    private String[] stockNames = {"RY", "TD", "BMO", "CM", "BNS", "IBM", "AAPL", "GOOG"};
     private String[] stockNames = {"RY", "TD", "BMO", "CM", "BNS", "IBM", "AAPL", "GOOG"};
 
     Stock mStock = new Stock();

@@ -6,6 +6,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ListView;
@@ -44,6 +45,15 @@ public class MoneyCreditActivity extends AppCompatActivity {
     @Bind(R.id.gridLayout)
     ListView mGridList;
 
+    private ArrayAdapter mArrayAdapter = null;
+    private ArrayList mArrayList = new ArrayList();
+
+    private String[] stockNames = {"Guess -$3000", "Payment +$3200", "Canadian Tire -$3500", "Pizza Pizza -$34",
+            "Armani -$800", "Future Shop -$2300", "Google Play Store -$700", "Payment +$5000",
+            "Groceries -$300", "Tesla -$13000"};
+
+
+
     private FrameLayout moneycreditBarChart;
     private BarChart mChart;
 
@@ -55,6 +65,13 @@ public class MoneyCreditActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_money_credit);
         ButterKnife.bind(this);
+
+        for(String stock : stockNames){
+            mArrayList.add(stock);
+        }
+
+        mArrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, mArrayList);
+        mGridList.setAdapter(mArrayAdapter);
 
         Typeface font = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
 
