@@ -56,6 +56,14 @@ public class MoneyTabActivity extends AppCompatActivity {
                 MoneyTabActivity.this.startActivity(nextPage);
             }
         });
+
+        mStockTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent nextPage = new Intent(MoneyTabActivity.this, HomePageActivity.class);
+                MoneyTabActivity.this.startActivity(nextPage);
+            }
+        });
     }
 
 

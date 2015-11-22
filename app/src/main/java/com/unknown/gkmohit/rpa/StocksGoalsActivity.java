@@ -1,9 +1,9 @@
 package com.unknown.gkmohit.rpa;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -34,6 +34,12 @@ public class StocksGoalsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_stocks_goals);
         ButterKnife.bind(this);
 
+        Typeface font = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
+        mStockTextView.setTypeface(font);
+        mCashTextView.setTypeface(font);
+        mEstateTextView.setTypeface(font);
+        mRetirementTextView.setTypeface(font);
+
         mProfitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,7 +58,13 @@ public class StocksGoalsActivity extends AppCompatActivity {
             }
         });
 
-
+        mCashTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent nextPage = new Intent(StocksGoalsActivity.this, MoneyTabActivity.class);
+                StocksGoalsActivity.this.startActivity(nextPage);
+            }
+        });
     }
 
 }

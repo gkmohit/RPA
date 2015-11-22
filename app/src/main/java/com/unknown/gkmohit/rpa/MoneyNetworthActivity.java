@@ -53,7 +53,13 @@ public class MoneyNetworthActivity extends AppCompatActivity {
             }
         });
 
-
+        mStockTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent nextPage = new Intent(MoneyNetworthActivity.this, HomePageActivity.class);
+                MoneyNetworthActivity.this.startActivity(nextPage);
+            }
+        });
     }
 
 
