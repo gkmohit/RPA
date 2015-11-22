@@ -1,9 +1,5 @@
 package model;
 
-import java.io.*;
-import java.util.*;
-
-
 public class PersonAsset {
 
     private int pid;
@@ -17,6 +13,7 @@ public class PersonAsset {
             this.aid = aid;
             this.bid = bid;
         }
+
     }
 
 }
