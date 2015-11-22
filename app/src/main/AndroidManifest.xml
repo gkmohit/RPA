@@ -19,11 +19,13 @@
         </activity>
         <activity
             android:name=".SignUpActivity"
-            android:label="Sign Up" >
+            android:label="Sign Up"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_home_page" >
+            android:label="@string/title_activity_home_page"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
