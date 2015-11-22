@@ -6,8 +6,10 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +24,7 @@ import java.util.ArrayList;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import type.lib.Stock;
 
 public class StockProfitActivity extends AppCompatActivity {
 
@@ -35,12 +38,22 @@ public class StockProfitActivity extends AppCompatActivity {
     @Bind(R.id.cashTextView) TextView mCashTextView;
     @Bind(R.id.estateTextView) TextView mEstateTextView;
     @Bind(R.id.retirementTextView) TextView mRetirementTextView;
+
+    @Bind(R.id.gridLayout)
+    ListView mGridList;
+
+    private ArrayAdapter mArrayAdapter = null;
+    private ArrayList mArrayList = new ArrayList();
+
     private FrameLayout stockProfitLineChart;
     private LineChart mChart;
 
     private float[] yData ={12,13,15,7,30};
     private String[] xData = {"", "", "", "", ""};
 
+    private String[] stockNames = {"RY", "TD", "BMO", "CM", "BNS", "IBM", "AAPL", "GOOG"};
+
+    Stock mStock = new Stock();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +61,37 @@ public class StockProfitActivity extends AppCompatActivity {
         setContentView(R.layout.activity_stock_profit);
 
         ButterKnife.bind(this);
+
+        for(String stock : stockNames){
+            mArrayList.add(stock);
+        }
+
+
+
+//        for(String stock : stockNames){
+//
+//            try
+//            {
+//                HttpClient httpclient = new DefaultHttpClient();
+//                HttpPost httppost = new HttpPost("myUrl");
+//
+//                // no idea what this does :)
+//                httppost.setEntity(new UrlEncodedFormEntity(postParameters));
+//
+//                String result;
+//                mStock.setSymbol(stock);
+//                result = "" + mStock.getName() + " = " +mStock.getPrice();
+//                mArrayList.add(result);
+//            }
+//            catch (Exception e)
+//            {
+//                Log.e("log_tag", "Error in http connection " + e.toString());
+//            }
+//
+//        }
+
+        mArrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, mArrayList);
+        mGridList.setAdapter(mArrayAdapter);
 
         Typeface font = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
         mStockTextView.setTypeface(font);

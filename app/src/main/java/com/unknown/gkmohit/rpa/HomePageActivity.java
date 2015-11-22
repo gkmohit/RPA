@@ -6,8 +6,10 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -40,18 +42,36 @@ public class HomePageActivity extends AppCompatActivity {
     @Bind(R.id.profitButton)
     Button mProfitButton;
 
+    @Bind(R.id.gridLayout)
+    ListView mGridList;
+
+    private ArrayAdapter mArrayAdapter = null;
+    private ArrayList mArrayList = new ArrayList();
 
     private FrameLayout ownedPieChartFrame;
     private PieChart mChart;
 
-    private float[] yData ={34,13,15,30,12};
-    private String[] xData = {"RBC", "TD", "BMO", "CIBC", "Scotia"};
+    private float[] yData ={18,15, 11, 10 , 11, 16, 14, 7 };
+    private String[] xData = {"RBC", "TD", "BMO", "CIBC", "Scotia", "IBM", "APPL", "Goog"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
         ButterKnife.bind(this);
+
+        mArrayList.add(0, "RBC");
+        mArrayList.add(1, "TD");
+        mArrayList.add(2, "BMO");
+        mArrayList.add(3, "CIBC");
+        mArrayList.add(4, "Scotia");
+        mArrayList.add(5, "IBM");
+        mArrayList.add(6,"Apple Inc");
+        mArrayList.add(7,"Google");
+
+        mArrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, mArrayList);
+        mGridList.setAdapter(mArrayAdapter);
+
 
         Typeface font = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
         mStockTextView.setTypeface(font);

@@ -16,6 +16,7 @@
         <meta-data android:name="VERSION" android:value="2" />
         <meta-data android:name="QUERY_LOG" android:value="true" />
         <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.example" />
+        <uses-permission android:name="android.permission.INTERNET" />
         <activity
             android:name=".HomePageActivity"
             android:label="@string/app_name"
@@ -47,24 +48,29 @@
         </activity>
         <activity
             android:name=".StockProfitActivity"
-            android:label="@string/title_activity_stock_profit" >
+            android:label="@string/title_activity_stock_profit"
+            android:screenOrientation="portrait" >
         </activity>
             android:screenOrientation="portrait" />
         <activity
             android:name=".StocksGoalsActivity"
             android:label="@string/title_activity_stocks_goals"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MoneyTabActivity"
-            android:label="@string/title_activity_money_tab" >
+            android:label="@string/title_activity_money_tab"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".MoneyCreditActivity"
-            android:label="@string/title_activity_money_credit" >
+            android:label="@string/title_activity_money_credit"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".MoneyNetworthActivity"
-            android:label="@string/title_activity_money_networth" >
+            android:label="@string/title_activity_money_networth"
+            android:screenOrientation="portrait" >
         </activity>
 
     </application>

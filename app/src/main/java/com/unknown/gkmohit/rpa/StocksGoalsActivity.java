@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import butterknife.Bind;
@@ -27,6 +28,9 @@ public class StocksGoalsActivity extends AppCompatActivity {
     TextView mEstateTextView;
     @Bind(R.id.retirementTextView)
     TextView mRetirementTextView;
+
+    @Bind(R.id.gridLayout)
+    ListView mGridList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

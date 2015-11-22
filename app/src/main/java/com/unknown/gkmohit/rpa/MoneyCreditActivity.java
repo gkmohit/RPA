@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,6 +40,9 @@ public class MoneyCreditActivity extends AppCompatActivity {
     @Bind(R.id.estateTextView) TextView mEstateTextView;
 
     @Bind(R.id.retirementTextView) TextView mRetirementTextView;
+
+    @Bind(R.id.gridLayout)
+    ListView mGridList;
 
     private FrameLayout moneycreditBarChart;
     private BarChart mChart;
