@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 
 public class MoneyNetworthActivity extends AppCompatActivity {
 
@@ -36,22 +35,13 @@ public class MoneyNetworthActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_money_networth);
 
-        ButterKnife.bind(this);
         Typeface font = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
         mStockTextView.setTypeface(font);
         mCashTextView.setTypeface(font);
         mEstateTextView.setTypeface(font);
         mRetirementTextView.setTypeface(font);
 
-        mCheckingsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent nextPage = new Intent(MoneyNetworthActivity.this, MoneyTabActivity.class);
-                MoneyNetworthActivity.this.startActivity(nextPage);
-            }
-        });
-
-        mCreditButton.setOnClickListener(new View.OnClickListener() {
+        mCashTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent nextPage = new Intent(MoneyNetworthActivity.this, MoneyCreditActivity.class);
@@ -59,13 +49,15 @@ public class MoneyNetworthActivity extends AppCompatActivity {
             }
         });
 
-        mStockTextView.setOnClickListener(new View.OnClickListener() {
+        mCreditButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent nextPage = new Intent(MoneyNetworthActivity.this, HomePageActivity.class);
+                Intent nextPage = new Intent(MoneyNetworthActivity.this, MoneyNetworthActivity.class);
                 MoneyNetworthActivity.this.startActivity(nextPage);
             }
         });
+
+
     }
 
 
