@@ -17,10 +17,4 @@ public class Asset {
 
         }
     }
-//	create table asset (
-//		    aid varchar(20) not null,
-//		    atype varchar(30) not null,
-//		    constraint asset_pk
-//		               primary key(aid)
-//		 );
 }
