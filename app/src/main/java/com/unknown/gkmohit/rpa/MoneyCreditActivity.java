@@ -6,16 +6,13 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class MoneyCreditActivity extends AppCompatActivity {
-
-
-    @Bind(R.id.creditButton)
-    Button mCreditButton;
 
     @Bind(R.id.networthButton)
     Button mNetworthButton;
@@ -31,12 +28,13 @@ public class MoneyCreditActivity extends AppCompatActivity {
 
     @Bind(R.id.retirementTextView) TextView mRetirementTextView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_money_credit);
-
         ButterKnife.bind(this);
+
         Typeface font = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
 
         mStockTextView.setTypeface(font);
@@ -47,7 +45,7 @@ public class MoneyCreditActivity extends AppCompatActivity {
         mCheckingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent nextPage = new Intent(MoneyCreditActivity.this, MoneyCreditActivity.class);
+                Intent nextPage = new Intent(MoneyCreditActivity.this, MoneyTabActivity.class);
                 MoneyCreditActivity.this.startActivity(nextPage);
             }
         });

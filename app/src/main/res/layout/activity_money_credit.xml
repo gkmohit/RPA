@@ -173,6 +173,6 @@
             android:layout_weight="1"
             android:background="@color/button_background_color"
             android:textColor="@color/button_text_color"
-            android:id="@+id/goalsButton" />
+            android:id="@+id/networthButton" />
     </LinearLayout>
 </LinearLayout>

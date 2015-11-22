@@ -19,11 +19,11 @@ public class StockProfitActivity extends AppCompatActivity {
     @Bind(R.id.goalsButton)
     Button mGoalsButton;
 
-    @Bind(R.id.stockTextView)
-    TextView mStockTextView;
+    @Bind(R.id.stockTextView) TextView mStockTextView;
     @Bind(R.id.cashTextView) TextView mCashTextView;
     @Bind(R.id.estateTextView) TextView mEstateTextView;
     @Bind(R.id.retirementTextView) TextView mRetirementTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
