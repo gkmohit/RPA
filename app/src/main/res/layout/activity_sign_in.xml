@@ -24,7 +24,8 @@
         android:paddingBottom="3dp"
         android:layout_alignLeft="@+id/rbcLoginLogo"
         android:layout_alignStart="@+id/rbcLoginLogo"
-        android:layout_below="@+id/rbcLoginLogo"/>
+        android:layout_below="@+id/rbcLoginLogo"
+        android:singleLine="true"/>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -67,7 +68,8 @@
         android:paddingBottom="3dp"
         android:layout_toRightOf="@+id/userNameFA"
         android:layout_toEndOf="@+id/userNameFA"
-        android:password="true"/>
+        android:password="true"
+        android:singleLine="true"/>
 
     <TextView
         android:layout_width="wrap_content"

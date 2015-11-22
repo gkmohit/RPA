@@ -6,9 +6,9 @@ package model;
  */
 
 //import java.io.*;
-import java.io.Serializable;
 import java.util.*;
-public class Person  implements Serializable {
+
+public class Person {
 
     private String first_name;
     private String last_name;
@@ -32,7 +32,6 @@ public class Person  implements Serializable {
 
     }
 
-
     public int get_personId(){
         return per_id;
     }
@@ -53,6 +52,21 @@ public class Person  implements Serializable {
         return login;
     }
 
+    public static class PersonAsset {
 
+        private int pid;
+        private String aid;
+        private String bid;
+
+        public PersonAsset(int pid, String aid, String bid) {
+
+            if (pid != 0 && aid != null) {
+                this.pid = pid;
+                this.aid = aid;
+                this.bid = bid;
+            }
+        }
+
+    }
 }
 

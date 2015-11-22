@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.method.KeyListener;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -43,26 +46,22 @@ public class SignInActivity extends AppCompatActivity {
         mSignInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Persons_List.access();
 
                 String username = mUserNameEditText.getText().toString();
                 String password = mPasswordEditText.getText().toString();
 
-                for(Person p : Persons_List.persons)
+                for (Person p : Persons_List.persons)
                 {
-                    if(p.getLogin().get_username().equalsIgnoreCase(username))
+                    if (p.getLogin().get_username().equalsIgnoreCase(username))
                     {
-                        Intent homePage = new Intent(SignInActivity.this, FirstHomePage.class);
-
-                        homePage.putExtra("person", p);
+                        Intent homePage = new Intent(SignInActivity.this, HomePageActivity.class);
                         SignInActivity.this.startActivity(homePage);
                     }
 
                 }
             }
         });
-
     }
 
 
