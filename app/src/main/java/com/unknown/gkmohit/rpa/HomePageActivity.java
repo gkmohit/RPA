@@ -37,9 +37,11 @@ public class HomePageActivity extends AppCompatActivity {
         mCashTextView.setTypeface(font);
         mEstateTextView.setTypeface(font);
         mRetirementTextView.setTypeface(font);
+
         mGoalsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                System.out.println("Goals");
                 Intent goalsPage = new Intent(HomePageActivity.this, StocksGoalsActivity.class);
                 HomePageActivity.this.startActivity(goalsPage);
             }
