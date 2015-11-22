@@ -8,11 +8,11 @@ public class Login {
     private String password;
     private String email;
 
-    public Login(String username, int per_id, String email, String password)
+    public Login(String username, int per_id, String email, String pwd)
     {
             this.username = username;
             this.email = email;
-            this.password = password;
+            this.password = pwd;
             this.per_id = per_id;
     }
 

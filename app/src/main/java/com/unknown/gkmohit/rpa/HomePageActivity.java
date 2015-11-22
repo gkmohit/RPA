@@ -76,7 +76,7 @@ public class HomePageActivity extends AppCompatActivity {
         mChart.setTransparentCircleAlpha(10);
 
         //rotation
-        mChart.setRotationAngle(0);
+        mChart.setRotationAngle(90);
         mChart.setRotationEnabled(true);
 
         //chart value listener
