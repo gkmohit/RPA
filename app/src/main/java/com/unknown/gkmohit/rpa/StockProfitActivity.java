@@ -1,16 +1,47 @@
 package com.unknown.gkmohit.rpa;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
 public class StockProfitActivity extends AppCompatActivity {
 
+    @Bind(R.id.ownedButton)
+    Button mOwnedButton;
+
+    @Bind(R.id.goalsButton)
+    Button mGoalsButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stock_profit);
+
+        ButterKnife.bind(this);
+
+        mGoalsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goalsPage = new Intent(StockProfitActivity.this, StocksGoalsActivity.class);
+                StockProfitActivity.this.startActivity(goalsPage);
+
+            }
+        });
+
+        mOwnedButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ownPage = new Intent(StockProfitActivity.this, HomePageActivity.class);
+                StockProfitActivity.this.startActivity(ownPage);
+
+            }
+        });
     }
 
     @Override
