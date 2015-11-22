@@ -1,26 +1,35 @@
 package com.unknown.gkmohit.rpa;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import model.Person;
 
 public class HomePageActivity extends AppCompatActivity {
-    private ListView mDrawerList;
-    private ArrayAdapter<String> mAdapter;
 
+    @Bind(R.id.stockTextView) TextView mStockTextView;
+    @Bind(R.id.cashTextView) TextView mCashTextView;
+    @Bind(R.id.estateTextView) TextView mEstateTextView;
+    @Bind(R.id.retirementTextView) TextView mRetirementTextView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.drawerlayout);
-        mDrawerList = (ListView) findViewById(R.id.navList);
+        setContentView(R.layout.activity_home_page);
+        ButterKnife.bind(this);
 
-        addDrawerItems();
-    }
-        private void addDrawerItems() {
-        String[] osArray = {"Android", "iOS", "Windows", "OS X", "Linux"};
-        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
-        mDrawerList.setAdapter(mAdapter);
+        Typeface font = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
+        mStockTextView.setTypeface(font);
+        mCashTextView.setTypeface(font);
+        mEstateTextView.setTypeface(font);
+        mRetirementTextView.setTypeface(font);
+
         }
 }
 

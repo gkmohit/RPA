@@ -51,8 +51,10 @@ public class SignInActivity extends AppCompatActivity {
                 String username = mUserNameEditText.getText().toString();
                 String password = mPasswordEditText.getText().toString();
 
-                for (Person p : Persons_List.persons) {
-                    if (p.getLogin().get_username().equalsIgnoreCase(username)) {
+                for (Person p : Persons_List.persons)
+                {
+                    if (p.getLogin().get_username().equalsIgnoreCase(username))
+                    {
                         Intent homePage = new Intent(SignInActivity.this, HomePageActivity.class);
                         SignInActivity.this.startActivity(homePage);
                     }

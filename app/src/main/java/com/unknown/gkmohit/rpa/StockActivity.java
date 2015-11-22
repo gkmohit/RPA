@@ -25,7 +25,7 @@ import java.util.ArrayList;
  */
 public class StockActivity extends Activity {
 
-        private FrameLayout stockLayout;
+        private FrameLayout ownedPieChartFrame;
         private PieChart mChart;
 
         private float[] yData ={12,13,15,30,40};
@@ -35,11 +35,11 @@ public class StockActivity extends Activity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_stock);
-            stockLayout = (FrameLayout) findViewById(R.id.stockLayout);
+            ownedPieChartFrame = (FrameLayout) findViewById(R.id.ownedPieChartFrame);
             mChart = new PieChart(this);
             //add pie chart to main layout
-            stockLayout.addView(mChart);
-            stockLayout.setBackgroundColor(Color.TRANSPARENT);
+            ownedPieChartFrame.addView(mChart);
+            ownedPieChartFrame.setBackgroundColor(Color.TRANSPARENT);
 
             //configure pie chart
             mChart.setUsePercentValues(true);
