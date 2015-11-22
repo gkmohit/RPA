@@ -13,33 +13,38 @@ import butterknife.ButterKnife;
 
 public class MoneyCreditActivity extends AppCompatActivity {
 
+
     @Bind(R.id.creditButton)
     Button mCreditButton;
+
     @Bind(R.id.networthButton)
     Button mNetworthButton;
+
     @Bind(R.id.checkingsButton)
     Button mCheckingsButton;
-    @Bind(R.id.stockTextView)
-    TextView mStockTextView;
-    @Bind(R.id.cashTextView)
-    TextView mCashTextView;
-    @Bind(R.id.estateTextView)
-    TextView mEstateTextView;
-    @Bind(R.id.retirementTextView)
-    TextView mRetirementTextView;
+
+    @Bind(R.id.stockTextView) TextView mStockTextView;
+
+    @Bind(R.id.cashTextView) TextView mCashTextView;
+
+    @Bind(R.id.estateTextView) TextView mEstateTextView;
+
+    @Bind(R.id.retirementTextView) TextView mRetirementTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_money_credit);
-        ButterKnife.bind(this);
 
+        ButterKnife.bind(this);
         Typeface font = Typeface.createFromAsset(getAssets(), "fontawesome-webfont.ttf");
+
         mStockTextView.setTypeface(font);
         mCashTextView.setTypeface(font);
         mEstateTextView.setTypeface(font);
         mRetirementTextView.setTypeface(font);
 
-        mCashTextView.setOnClickListener(new View.OnClickListener() {
+        mCheckingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent nextPage = new Intent(MoneyCreditActivity.this, MoneyCreditActivity.class);
@@ -51,6 +56,14 @@ public class MoneyCreditActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent nextPage = new Intent(MoneyCreditActivity.this, MoneyNetworthActivity.class);
+                MoneyCreditActivity.this.startActivity(nextPage);
+            }
+        });
+
+        mStockTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent nextPage = new Intent(MoneyCreditActivity.this, HomePageActivity.class);
                 MoneyCreditActivity.this.startActivity(nextPage);
             }
         });

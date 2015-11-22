@@ -16,16 +16,22 @@ public class MoneyTabActivity extends AppCompatActivity {
 
     @Bind(R.id.creditButton)
     Button mCreditButton;
+
     @Bind(R.id.networthButton)
     Button mNetworthButton;
+
     @Bind(R.id.checkingsButton)
     Button mCheckingsButton;
+
     @Bind(R.id.stockTextView)
     TextView mStockTextView;
+
     @Bind(R.id.cashTextView)
     TextView mCashTextView;
+
     @Bind(R.id.estateTextView)
     TextView mEstateTextView;
+
     @Bind(R.id.retirementTextView)
     TextView mRetirementTextView;
 
@@ -53,6 +59,14 @@ public class MoneyTabActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent nextPage = new Intent(MoneyTabActivity.this, MoneyNetworthActivity.class);
+                MoneyTabActivity.this.startActivity(nextPage);
+            }
+        });
+
+        mStockTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent nextPage = new Intent(MoneyTabActivity.this, HomePageActivity.class);
                 MoneyTabActivity.this.startActivity(nextPage);
             }
         });
