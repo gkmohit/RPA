@@ -20,12 +20,12 @@
         <activity
             android:name=".SignUpActivity"
             android:label="Sign Up"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_home_page"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -36,6 +36,10 @@
             android:name=".StockActivity"
             android:label="@string/title_activity_sign_in"
             android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".StockProfitActivity"
+            android:label="@string/title_activity_stock_profit" >
         </activity>
     </application>
 
