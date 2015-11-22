@@ -395,5 +395,8 @@
     <string name="title_activity_first_home_page">FirstHomePage</string>
     <string name="title_activity_first_page_beta">FirstPageBetaActivity</string>
     <string name="title_activity_stocks_goals">StocksGoalsActivity</string>
+    <string name="title_activity_money_tab">MoneyTabActivity</string>
+    <string name="title_activity_money_credit">MoneyCreditActivity</string>
+    <string name="title_activity_money_networth">MoneyNetworthActivity</string>
 
 </resources>
