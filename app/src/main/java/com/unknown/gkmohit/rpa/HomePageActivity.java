@@ -1,12 +1,15 @@
 package com.unknown.gkmohit.rpa;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ListView;
@@ -35,6 +38,14 @@ public class HomePageActivity extends AppCompatActivity {
     @Bind(R.id.cashTextView) TextView mCashTextView;
     @Bind(R.id.estateTextView) TextView mEstateTextView;
     @Bind(R.id.retirementTextView) TextView mRetirementTextView;
+
+
+    @Bind(R.id.goalsButton)
+    Button mGoalsButton;
+
+    @Bind(R.id.profitButton)
+    Button mProfitButton;
+
 
     private FrameLayout ownedPieChartFrame;
     private PieChart mChart;
@@ -155,6 +166,24 @@ public class HomePageActivity extends AppCompatActivity {
 
         //update pie chart
         mChart.invalidate();
+
+        mProfitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent profitPage = new Intent(HomePageActivity.this, StockProfitActivity.class);
+                HomePageActivity.this.startActivity(profitPage);
+
+            }
+        });
+
+        mGoalsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goalPage = new Intent(HomePageActivity.this, StocksGoalsActivity.class);
+                HomePageActivity.this.startActivity(goalPage);
+
+            }
+        });
 
     }
 

@@ -8,7 +8,6 @@ import butterknife.ButterKnife;
 
 public class MoneyTabActivity extends AppCompatActivity {
 
-    Bind(R.id.)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
